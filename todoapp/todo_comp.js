@@ -1,4 +1,4 @@
-import {View,Text,Button ,Alert, ToggleEvent,StyleSheet, Switch,TextInput, TouchableOpacity} from 'react-native';
+import {View,Text ,Alert,  Switch,TextInput, TouchableOpacity} from 'react-native';
 import { FlatList } from 'react-native';
 import { useSelector,useDispatch } from 'react-redux';
 import { useState } from 'react';
@@ -33,7 +33,7 @@ const renderList = ({ item }) => {
   
         
         <View style={style.statusContainer}>
-          <Text style={style.status}>Status: {item.isCompleted ? 'Completed' : 'Not Completed'}</Text>
+          <Text style={style.status}>Status: {item.isCompleted ? 'Done' : 'Due'}</Text>
           
           <Switch
             onValueChange={() => onTogglehandle(item.id)}
